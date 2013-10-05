@@ -1,15 +1,15 @@
 {
-  "name": "application-name",
-  "version": "0.0.1",
-  "private": true,
-  "main": "app.js",
-  "scripts": {
-    "start": "node app.js"
-  },
-  "dependencies": {
-    "express": "3.3.7",
-    "jade": "*",
-    "less-middleware": "*",
-    "socket.io": "~0.9.16"
-  }
+	"name": "Node Hold'em",
+	"version": "0.0.1",
+	"private": true,
+	"main": "app.js",
+	"scripts": {
+		"start": "node app.js"
+	},
+	"dependencies": {
+		"express": "3.3.7",
+		"jade": "*",
+		"less-middleware": "*",
+		"socket.io": "~0.9.16"
+	}
 }
