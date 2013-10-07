@@ -21,20 +21,20 @@ html(class="no-js", lang="en")
 			section(class="top-bar-section")
 				ul(class="right")
 					li(class="has-form")
-						a(class="button", href="#") Join
+						a(class="button", href="#join", disabled) Join
 					li(class="has-form")
-						a(class="button", href="#") Fold
+						a(class="button", href="#fold", disabled) Fold
 					li(class="has-form")
-						a(class="button", href="#") Check
+						a(class="button", href="#check", disabled) Check
 					li(class="has-form")
-						a(class="button", href="#") Call
+						a(class="button", href="#call", disabled) Call
 					li(class="has-form")
 						form
 							div(class="row collapse")
 								div(class="small-4 columns")
-									a(href="#raise", class="alert button") Raise
+									a(class="alert button", href="#raise", disabled) Raise
 								div(class="small-8 columns")
-									input(type="text", value="2")
+									input(name="raise", type="text", value="2", disabled)
 		block content
 
 		script(src="/socket.io/socket.io.js")
