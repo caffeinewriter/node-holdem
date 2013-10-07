@@ -8,6 +8,7 @@ var path = require('path');
 var app = express();
 var server = http.createServer(app)
 var io = require('socket.io').listen(server);
+
 var poker = require('./modules/poker');
 var player = require('./modules/player');
 var players = [];
