@@ -21,26 +21,27 @@ html(class="no-js", lang="en")
 			section(class="top-bar-section")
 				ul(class="right")
 					li(class="has-form")
-						a(class="button", href="#join", disabled) Join
+						a(id="join", class="button", href="#join", disabled) Join
 					li(class="has-form")
-						a(class="button", href="#fold", disabled) Fold
+						a(id="fold", class="button", href="#fold", disabled) Fold
 					li(class="has-form")
-						a(class="button", href="#check", disabled) Check
+						a(id="check", class="button", href="#check", disabled) Check
 					li(class="has-form")
-						a(class="button", href="#call", disabled) Call
+						a(id="call", class="button", href="#call", disabled) Call
 					li(class="has-form")
 						form
 							div(class="row collapse")
 								div(class="small-4 columns")
-									a(class="alert button", href="#raise", disabled) Raise
+									a(id="raise", class="alert button", href="#raise", disabled) Raise
 								div(class="small-8 columns")
-									input(name="raise", type="text", value="2", disabled)
+									input(id="raise-amount", name="raise", type="text", value="2", disabled)
 		block content
 
 		script(src="/socket.io/socket.io.js")
-		script.
-			document.write('<script src=' +
-			('__proto__' in {} ? '/javascripts/vendor/zepto' : '/javascripts/vendor/jquery') +
-			'.js><\/script>')
+		//- script.
+		//- 	document.write('<script src=' +
+		//- 	('__proto__' in {} ? '/javascripts/vendor/zepto' : '/javascripts/vendor/jquery') +
+		//- 	'.js><\/script>')
+		script(src="/javascripts/vendor/jquery.js")
 		script(src="/javascripts/vendor/foundation.min.js")
 		script(src="/javascripts/client.js")

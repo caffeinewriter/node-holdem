@@ -35,15 +35,15 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 
-server.listen(app.get('port'), function(){
+server.listen(app.get('port'), function (){
 	console.log('Express server listening on port ' + app.get('port'));
 });
 
 game.startGame();
 
 io.sockets.on('connection', function (socket) {
-	// socket.emit('news', { hello: 'world' });
-	socket.on('newPlayer', function (player) {
-		// players.push( new player(socket.id, player.name) );
-	});
+	socket.emit('playerList', players);
+	// socket.on('newPlayer', function (player) {
+	// 	// players.push( new player(socket.id, player.name) );
+	// });
 });
