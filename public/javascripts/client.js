@@ -9,8 +9,15 @@ var socket = io.connect();
 socket.on('playerList', function (players) {
 	if (players.length < 6) {
 		console.log("There's room at the table. Come play!");
-		$('#join').prop("disabled", false);
+		$('#join').attr("disabled", false);
 	} else {
 		console.log("No more space at the table. Sorry.");
+	}
+});
+
+$("#join").click(function (event) {
+	event.preventDefault();
+	if (!$(this).attr("disabled")) {
+		console.log("Join was clicked.");
 	}
 });

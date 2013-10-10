@@ -3,11 +3,11 @@
  */
 var express = require('express');
 var http = require('http');
-var routes = require('./routes');
 var path = require('path');
 var app = express();
 var server = http.createServer(app)
 var io = require('socket.io').listen(server);
+io.set('log level', 2);
 
 var poker = require('./modules/poker');
 var player = require('./modules/player');
@@ -33,9 +33,11 @@ if ('development' == app.get('env')) {
 	app.use(express.errorHandler());
 }
 
-app.get('/', routes.index);
+app.get('/', function (req, res) {
+	res.render('index', { title: 'Express' });
+});
 
-server.listen(app.get('port'), function (){
+server.listen(app.get('port'), function () {
 	console.log('Express server listening on port ' + app.get('port'));
 });
 

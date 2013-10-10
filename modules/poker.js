@@ -20,3 +20,10 @@ module.exports = function() {
 
 	return poker;
 };
+
+/*
+
+A Single Hand
+1. 
+
+ */
